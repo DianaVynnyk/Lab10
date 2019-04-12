@@ -1,16 +1,16 @@
 class Lamp:
-    numberOfLampsPurchased = 3
+    number_Of_Lamps_Purchased = 3
 
-    def __init__(self, type="led", powerInWatts=3,
-                 theNumberOfDiodeLamps=1, theNameOfTheManufacturer="Rexel",
-                 attachmentType="on the surface", TheColorOfTheCeiling="white", producingCountry="China"):
+    def __init__(self, type="led", power_In_Watts=3,
+                 the_Number_Of_Diode_Lamps=1, the_Name_Of_The_Manufacturer="Rexel",
+                 attachment_Type="on the surface", The_Color_Of_The_Ceiling="white", producing_Country="China"):
         self.type = type
-        self.power = powerInWatts
-        self.number = theNumberOfDiodeLamps
-        self.name = theNameOfTheManufacturer
-        self.attachment = attachmentType
-        self.color = TheColorOfTheCeiling
-        self.country = producingCountry
+        self.power = power_In_Watts
+        self.number = the_Number_Of_Diode_Lamps
+        self.name = the_Name_Of_The_Manufacturer
+        self.attachment = attachment_Type
+        self.color = The_Color_Of_The_Ceiling
+        self.country = producing_Country
 
     def __del__(self):
         print("Delete", self.type)
@@ -18,16 +18,16 @@ class Lamp:
 
     def __str__(self):
         return ("type: " + self.type + ", power: "
-                + str(self.power) + "theNumberOfDiodeLamps: "
-                + str(self.number) + "theNameOfTheManufacturer: "
-                + self.name + "attachmentType:" + self.atachment
-                + " color:" + self.color
-                + "country: " + self.country)
+                + str(self.power) + ", the_Number_Of_Diode_Lamps: "
+                + str(self.number) + ", the_Name_Of_The_Manufacturer: "
+                + self.name + ", attachment_Type: " + self.attachment
+                + ", color:" + self.color
+                + ", country: " + self.country)
 
     @staticmethod
-    def numberOfLampsPurchased(numberOfLampsPurchased):
-        Lamp.numberOfLampsPurchased += numberOfLampsPurchased
-        return Lamp.numberOfLampsPurchased
+    def number_Of_Lamps_Purchased(number_Of_Lamps_Purchased):
+        Lamp.number_Of_Lamps_Purchased += number_Of_Lamps_Purchased
+        return Lamp.number_Of_Lamps_Purchased
 
 x = Lamp("led", 3, 1, "Rexel", "on the surface", "white", "China")
 y = Lamp()
@@ -35,4 +35,4 @@ z = Lamp()
 print(x)
 print(y)
 print(z)
-print(Lamp.numberOfLampsPurchased)
+print(Lamp.number_Of_Lamps_Purchased)
