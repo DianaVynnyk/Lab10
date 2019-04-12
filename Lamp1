@@ -1,0 +1,38 @@
+class Lamp:
+    numberOfLampsPurchased = 3
+
+    def __init__(self, type="led", powerInWatts=3,
+                 theNumberOfDiodeLamps=1, theNameOfTheManufacturer="Rexel",
+                 attachmentType="on the surface", TheColorOfTheCeiling="white", producingCountry="China"):
+        self.type = type
+        self.power = powerInWatts
+        self.number = theNumberOfDiodeLamps
+        self.name = theNameOfTheManufacturer
+        self.attachment = attachmentType
+        self.color = TheColorOfTheCeiling
+        self.country = producingCountry
+
+    def __del__(self):
+        print("Delete", self.type)
+        print("Delete", self.country)
+
+    def __str__(self):
+        return ("type: " + self.type + ", power: "
+                + str(self.power) + "theNumberOfDiodeLamps: "
+                + str(self.number) + "theNameOfTheManufacturer: "
+                + self.name + "attachmentType:" + self.atachment
+                + " color:" + self.color
+                + "country: " + self.country)
+
+    @staticmethod
+    def numberOfLampsPurchased(numberOfLampsPurchased):
+        Lamp.numberOfLampsPurchased += numberOfLampsPurchased
+        return Lamp.numberOfLampsPurchased
+
+x = Lamp("led", 3, 1, "Rexel", "on the surface", "white", "China")
+y = Lamp()
+z = Lamp()
+print(x)
+print(y)
+print(z)
+print(Lamp.numberOfLampsPurchased)
